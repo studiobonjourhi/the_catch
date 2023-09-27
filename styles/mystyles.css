@@ -1,0 +1,420 @@
+@charset "UTF-8";
+/* CSS Document */
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+	z-index: 0;
+} 
+
+body {
+	margin: 0;
+	background-color: white;
+}
+
+main{
+	margin-top: 10%;
+}
+
+h1, h2, h3{
+	font-family: 'DM Serif Display', serif;
+}
+
+p {
+	font-family: "Lucida Grande";
+	font-size: 1.5rem; 
+	line-height: 2rem;
+}
+
+/* header */
+
+.header{
+	background-color: black;
+	width: 100%;
+	position: fixed;
+	font-family: 'DM Serif Display', serif;
+	font-size: 2rem;
+}
+
+.header ul {
+	margin: 0;
+	list-style: none;		
+	overflow: hidden;
+	top: 0;
+}
+
+.header li a{
+	display: block;
+	text-decoration: none;
+	color: white;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+	font-style: italic;
+}
+
+
+.header li a:hover,
+.header .menu-btn:hover {
+	font-style: italic;
+}
+.header .logo{
+	display: block;
+	float: left;
+	padding: 1%;
+	text-decoration: none;
+}
+
+.header img{
+	width: 100%;
+	margin-top: 2%;
+}
+/* menu */
+
+.header .menu {
+	clear: both; 
+	max-height: 0;
+	transition: max-height .2s ease-out;
+	height: 100%;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: white;
+  display: block;
+  height: 1vh;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 6vw;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background-color: grey;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 2vw;
+}
+
+.header .menu-icon .navicon:after {
+    top: 2vw;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 10%;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* progress bar */
+.progress-container {
+	width: 100%;
+	height: 0.5rem;
+	background: white; 
+	z-index: 3;
+	position: fixed;
+	top: 3.75em;
+}
+
+/*scroll*/
+.progress-bar{
+  height: 0.5rem;
+  background: red;
+  width: 0%;
+}
+/*end of progress bar/nav*/
+
+/*container ie index*/
+
+.container{
+	display: flex;
+	flex-direction: column;	
+	width: 100%;
+	height: 100%;
+	color: white;	
+}
+
+.container>div{
+	margin: auto;
+	margin-top: 20%;
+}
+.container>div h1{
+	font-size: 5rem;
+	text-align: center;
+	
+}
+
+/*end of container*/
+
+/*two grid*/
+
+.two{
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-gap: 5%;
+	margin: auto;
+	padding: 5%;
+}
+
+.two>div{
+	width: 100%;
+	color: black;
+}
+
+.two>div h1{
+	font-size: 4rem;
+	text-transform: capitalize;
+	
+}
+
+.two>div.item1{
+	background-color: white;
+	padding: 5%;
+	width: auto;
+	
+}
+
+/*two grid*/
+
+
+/*rss substack feed*/
+
+.feed{
+	width: 80%;
+	margin: auto;
+	z-index: -999 !important;
+	position: relative;
+}
+
+
+/*end of rss substack feed*/
+
+.fallingman {
+	background-image: url("../images/fallingman.svg");
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+@keyframes fallingman{
+	50% {transform: rotate(360deg);}
+	}
+
+/*bg*/
+
+/*colours*/
+
+.form{
+	margin: 15%;
+	background-color: white; 
+	padding: 5%;
+	font-family: 'DM Serif Display', serif;
+	font-size: 1.5rem;
+}
+
+input[type=text], select {
+	width: 100%;
+	padding: 2%;
+	margin: 8px 0;
+	display: inline-block;
+	border: 0.25vh solid black;
+	border-radius: 4px;
+	box-sizing: border-box;
+	margin-bottom: 5%;
+}
+
+input[type=submit] {
+	background-color: black;
+	border-radius: 25px;
+	color: white;
+	padding: 2%;
+	margin-top: 5%;
+	width: 100%;
+	font-family: 'DM Serif Display', serif;
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	border: none;
+}
+
+input[type=submit]:hover {
+	background-color: red;
+	font-style: italic;
+}
+
+
+/*button*/
+.button {
+	background-color: white;
+	border-radius: 25px;
+	padding: 2%;
+	margin-top: 5%;
+	font-family: 'DM Serif Display', serif;
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	border: none;
+}
+
+.button a{
+	color: black;
+}
+
+.button:hover a{
+	font-style: italic;
+}
+/*colours*/
+
+.bg{
+	width: 100%;
+}
+
+/*colours*/
+.red {
+	background-color: red;
+}
+
+.whitebg{
+	background-color: white;
+}
+
+.whitetxt {
+	color: white;
+}
+
+.black{
+	background-color: black;
+}
+
+.blacktxt{
+	color: black;
+}
+
+/*end of colours*/
+
+
+footer {
+	text-align: center;
+	object-align: center;
+	background-color: black;
+	padding: 10% 0% 2% 0%;
+	margin-top: -5%;
+}
+
+footer p,a{
+	color: white; 
+	text-decoration: none;
+	font-family: 'DM Serif Display', serif;
+}
+
+.foot{
+ 	display: grid;
+    grid-template-columns: auto auto;
+    padding: 0.5% 1% 0.75% 1%;
+    margin: 0 auto;
+    width: 30%;
+}
+
+.foot>div{
+	text-align: center;
+	margin:  0% 0% 0% 0%;
+}
+
+.copyright{
+	font-size: 1.5rem;
+}
+
+/*end of footer*/
+
+
+/* DESKTOP VERSION START HERE----------------------------------------*/
+
+@media (min-width: 1000px){
+  .header li {
+	  float: left;
+	  padding-top: 20px;
+  }
+  .header li a {
+	  padding: 20px 30px;
+  }
+  .header .menu {
+	  clear: none;
+	  float: right;
+	  max-height: none;
+	  text-align: center;
+  }
+  .header .menu-icon {
+	  display: none;
+  }
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+} 
+	
+}	
+
+/*MOBILE VERSION STARTS HERE----------------------------------------*/
+
+@media (max-width: 1000px) {
+	body{
+		display: flex;
+		flex-wrap: nowrap;
+		flex-direction: column;
+	}
+	
+.header .logo {
+	padding-left: 0%;
+}
+	
+	html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+} 
+	
+	.two {
+		width: 80%;
+		display: grid;
+		grid-template-columns: auto;
+		padding: inherit;
+		margin-bottom: 20vh;
+	}
+}
+
+	
